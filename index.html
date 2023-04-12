@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certamen 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+   
+</head>
+
+<body class="container">
+    <header class="mt-4 p-5 bg-primary text-white rounded">
+        <h1>Postulantes Empresa</h1>
+    </header>
+    <div>
+        <form id="form">
+            <div class="row mt-3">
+                <div class="col">
+                    <input type="text" id="run" class="form-control" placeholder="Ingresa Run" name="run">
+                </div>
+                <div class="col">
+                    <input type="text" id="nombre" class="form-control" placeholder="Ingresa Nombre" name="nombre">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <input type="text" id="email" class="form-control" placeholder="Ingresa Email" name="email">
+                </div>
+                <div class="col">
+                    <input type="text" id="telefono" class="form-control" placeholder="Ingresa Telefono"
+                        name="telefono">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <input type="text" id="cargo" class="form-control" placeholder="Ingresa Cargo" name="cargo">
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <div class="mt-3 text-end">
+                
+                <input type="button" value="Limpiar" class="btn btn-danger limpiar" id="Limpiar">
+                <input type="submit" value="Guardar" class="btn btn-success" id="Guardar">
+            </div>
+        </form>
+    </div>
+    <div>
+        <h2>Lista de Postulantes</h2>
+        <table class="table table-bordered">
+            <thead class="bg-success text-white">
+                <tr>
+                    <th>Run</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Cargo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
