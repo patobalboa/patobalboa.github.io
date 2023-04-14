@@ -4,6 +4,31 @@ import {guardar, obtenerall, eliminar, obtenerUno, editar} from './config.js'
 let id = ''
 let editStatus = false
 
+let Fn = {
+    // Valida el run con su cadena completa "XXXXXXXX-X"
+    validaRut : function (rutCompleto) {
+        if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
+            return false;
+        var tmp     = rutCompleto.split('-');
+        var digv    = tmp[1]; 
+        var rut     = tmp[0];
+        if ( digv == 'K' ) digv = 'k' ;
+    
+        return (Fn.dv(rut) == digv );
+    },
+    dv : function(T){
+        var M=0,S=1;
+        for(;T;T=Math.floor(T/10))
+            S=(S+T%10*(9-M++%6))%11;
+        return S?S-1:'k';
+    },
+    validaEmail : function(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }   
+}
+
+
 
 document.querySelectorAll('.limpiar').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -22,7 +47,8 @@ document.getElementById('form').addEventListener('submit',(e) => {
     const cargo = document.getElementById('cargo').value
 
     if(!editStatus){
-        if(run != '' && nombre != '' && email != '' && telefono != '' && cargo != ''){
+        if((run != '' && nombre != '' && email != '' && telefono != '' && cargo != '') && (Fn.validaEmail(email) && Fn.validaRut(run) )){
+            
             guardar(run, nombre, email, telefono, cargo)
             Swal.fire({
                 icon: 'success',
@@ -31,9 +57,11 @@ document.getElementById('form').addEventListener('submit',(e) => {
                 timer: 1500
               })
             document.getElementById('form').reset()
+        
+            
         }else{
             // colorea el borde de los campos vacios.
-            if(run == ''){
+            if(run == '' && Fn.validaRut(run) == false){
                 document.getElementById('run').style.borderColor = 'red'
             }else{
                 document.getElementById('run').style.borderColor.reset()
@@ -43,7 +71,7 @@ document.getElementById('form').addEventListener('submit',(e) => {
             }else{
                 document.getElementById('nombre').style.borderColor.reset()
             }
-            if(email == ''){
+            if(email == '' && Fn.validaEmail(email) == false){
                 document.getElementById('email').style.borderColor = 'red'
             }else{
                 document.getElementById('email').style.borderColor.reset()
@@ -57,7 +85,7 @@ document.getElementById('form').addEventListener('submit',(e) => {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'El faltaron datos que ingresar'
+                text: 'Revise los campos vacios o incorrectos'
               })
         }
         
