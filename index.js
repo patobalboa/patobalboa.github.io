@@ -61,7 +61,7 @@ document.getElementById('form').addEventListener('submit',(e) => {
             
         }else{
             // colorea el borde de los campos vacios.
-            if(run == '' && Fn.validaRut(run) == false){
+            if(run == '' || Fn.validaRut(run) == false){
                 document.getElementById('run').style.borderColor = 'red'
             }else{
                 document.getElementById('run').style.borderColor.reset()
@@ -71,7 +71,7 @@ document.getElementById('form').addEventListener('submit',(e) => {
             }else{
                 document.getElementById('nombre').style.borderColor.reset()
             }
-            if(email == '' && Fn.validaEmail(email) == false){
+            if(email == '' || Fn.validaEmail(email) == false){
                 document.getElementById('email').style.borderColor = 'red'
             }else{
                 document.getElementById('email').style.borderColor.reset()
