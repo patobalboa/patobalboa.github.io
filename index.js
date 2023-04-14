@@ -5,7 +5,7 @@ let id = ''
 let editStatus = false
 
 let Fn = {
-    // Valida el run con su cadena completa "XXXXXXXX-X"
+   
     validaRut : function (rutCompleto) {
         if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
             return false;
@@ -21,13 +21,13 @@ let Fn = {
         for(;T;T=Math.floor(T/10))
             S=(S+T%10*(9-M++%6))%11;
         return S?S-1:'k';
-    },
-    validaEmail : function(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }   
+    }
 }
 
+function validaEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
 
 
 document.querySelectorAll('.limpiar').forEach(btn => {
@@ -47,7 +47,7 @@ document.getElementById('form').addEventListener('submit',(e) => {
     const cargo = document.getElementById('cargo').value
 
     if(!editStatus){
-        if((run != '' && nombre != '' && email != '' && telefono != '' && cargo != '') && (Fn.validaEmail(email) && Fn.validaRut(run) )){
+        if((run != '' && nombre != '' && email != '' && telefono != '' && cargo != '' && validaEmail(email) && Fn.validaRut(run) )){
             
             guardar(run, nombre, email, telefono, cargo)
             Swal.fire({
@@ -64,8 +64,7 @@ document.getElementById('form').addEventListener('submit',(e) => {
             if(run == '' || Fn.validaRut(run) == false){
                 document.getElementById('run').style.borderColor = 'red'
             }else{
-                // resetea el borde de los campos vacios.
-                document.getElementById('run').style.borderColor = 'none'
+                document.getElementById('run').style.borderColor.reset()
             }
             if(nombre == ''){
                 document.getElementById('nombre').style.borderColor = 'red'
@@ -81,6 +80,11 @@ document.getElementById('form').addEventListener('submit',(e) => {
                 document.getElementById('telefono').style.borderColor = 'red'
             }else{
                 document.getElementById('telefono').style.borderColor.reset()
+            }
+            if(cargo == ''){
+                document.getElementById('cargo').style.borderColor = 'red'
+            }else{
+                document.getElementById('cargo').style.borderColor.reset()
             }
 
             Swal.fire({
@@ -124,7 +128,6 @@ document.getElementById('form').addEventListener('submit',(e) => {
 
 
 window.addEventListener('DOMContentLoaded', async () =>{
-    //arreglo que contendrá los datos de la base de datos
     obtenerall((querySnapshot) => { 
         let tabla = ''
         querySnapshot.forEach((doc) =>{

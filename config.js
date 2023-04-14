@@ -2,12 +2,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebas
 import {addDoc, collection, getFirestore, onSnapshot, deleteDoc, doc, updateDoc, getDoc} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA4vkGITcSXYY9nS4_2WE7kSwqRjWQ4RnI",
-    authDomain: "certamen-e8a5d.firebaseapp.com",
-    projectId: "certamen-e8a5d",
-    storageBucket: "certamen-e8a5d.appspot.com",
-    messagingSenderId: "890551137499",
-    appId: "1:890551137499:web:45a2c2c6fc322ce12508fe"
+    apiKey: "AIzaSyBR1BC-L2Oi2wMu_iQ1nfudRGXTs4Ma1OU",
+    authDomain: "certamen1-30278.firebaseapp.com",
+    projectId: "certamen1-30278",
+    storageBucket: "certamen1-30278.appspot.com",
+    messagingSenderId: "1002551611304",
+    appId: "1:1002551611304:web:2f5c88c34d921b5e02179d"
   };
 
 // Initialize Firebase
