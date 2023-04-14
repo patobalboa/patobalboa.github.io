@@ -60,11 +60,12 @@ document.getElementById('form').addEventListener('submit',(e) => {
         
             
         }else{
-            // colorea el borde de los campos vacios.
+            
             if(run == '' || Fn.validaRut(run) == false){
                 document.getElementById('run').style.borderColor = 'red'
             }else{
-                document.getElementById('run').style.borderColor.reset()
+                // resetea el borde de los campos vacios.
+                document.getElementById('run').style.borderColor = 'none'
             }
             if(nombre == ''){
                 document.getElementById('nombre').style.borderColor = 'red'
