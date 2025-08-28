@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Code+ - Consultora tecnológica chilena especializada en Cloud Computing, DevOps, SRE y automatización de procesos TI.">
+    <meta name="keywords" content="Code+, consultora tecnológica, DevOps, SRE, Cloud Computing, AWS, Azure, GCP, automatización, Chile">
+    <meta name="author" content="Code+">
+    <meta property="og:title" content="Code+ - Consultora Tecnológica">
+    <meta property="og:description" content="Soluciones confiables e innovadoras en infraestructura tecnológica, automatización y soporte especializado.">
+    <meta property="og:url" content="https://codeplus.cl">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://codeplus.cl/assets/images/logo-social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Code+ - Consultora Tecnológica">
+    <meta name="twitter:description" content="Soluciones confiables e innovadoras en infraestructura tecnológica, automatización y soporte especializado.">
+    
+    <title>Code+ - Consultora Tecnológica | Soluciones Cloud y DevOps</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/contrast-fixes.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo.svg" alt="Code+" class="logo-img" loading="eager">
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog Técnico</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+            
+            <!-- Theme Selector -->
+            <div class="theme-selector" id="theme-selector">
+                <button class="theme-btn" id="theme-btn" aria-label="Cambiar tema">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
+                <div class="theme-dropdown" id="theme-dropdown">
+                    <button class="theme-option" data-theme="light">
+                        <i class="fas fa-sun"></i>
+                        <span>Claro</span>
+                    </button>
+                    <button class="theme-option" data-theme="dark">
+                        <i class="fas fa-moon"></i>
+                        <span>Oscuro</span>
+                    </button>
+                    <button class="theme-option" data-theme="system">
+                        <i class="fas fa-desktop"></i>
+                        <span>Sistema</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- <div class="hero-logo">
+                    <img src="assets/images/logo-blanco.svg" alt="Code+" class="hero-logo-img" loading="eager">
+                </div> -->
+                <h1 class="hero-title">Soluciones Tecnológicas Confiables e Innovadoras</h1>
+                <p class="hero-description">
+                    Especialistas en Cloud Computing, DevOps y automatización de procesos TI.
+                </p>
+                
+                <!-- Terminal Demo -->
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="terminal-btn close"></span>
+                            <span class="terminal-btn minimize"></span>
+                            <span class="terminal-btn maximize"></span>
+                        </div>
+                        <div class="terminal-title">codeplus@enterprise:~ — Terminal</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">root@codeplus:~$</span>
+                            <span class="terminal-command"></span>
+                            <span class="terminal-cursor">|</span>
+                        </div>
+                        <div class="terminal-output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nosotros</h2>
+                <p class="section-subtitle">Conoce la experiencia detrás de Code+</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Nuestra Historia</h3>
+                    <p>
+                        Code+ nace de la pasión por la tecnología y la educación, combinando más de 15 años de experiencia 
+                        en la industria TI con una sólida formación académica. Nuestra misión es brindar soluciones 
+                        tecnológicas confiables e innovadoras que impulsen el crecimiento de las empresas.
+                    </p>
+                    <h3>Nuestro Fundador</h3>
+                    <p>
+                        Con más de 15 años de experiencia como <strong>SRE (Site Reliability Engineer)</strong>, 
+                        <strong>DevOps Engineer</strong> y <strong>Docente Universitario</strong>, nuestro fundador 
+                        combina la experiencia práctica en la industria TI con la pasión por la enseñanza y 
+                        la formación de nuevos profesionales.
+                    </p>
+                    <p>
+                        Esta única combinación de experiencia industrial y académica nos permite no solo implementar 
+                        soluciones técnicas de vanguardia, sino también formar y capacitar a los equipos de trabajo 
+                        para asegurar el éxito a largo plazo.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Experiencia Académica</h4>
+                        <p>Docente universitario con enfoque en tecnologías emergentes y mejores prácticas</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Experiencia Industrial</h4>
+                        <p>15+ años como SRE y DevOps en empresas líderes del sector tecnológico</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nuestros Valores -->
+            <div class="values-section">
+                <div class="section-header">
+                    <h3 class="values-title">Nuestros Valores</h3>
+                    <p class="values-subtitle">Los principios que guían nuestro trabajo diario</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Confianza</h4>
+                        <p>Construimos relaciones duraderas basadas en transparencia, cumplimiento de compromisos y resultados consistentes.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Excelencia Técnica</h4>
+                        <p>Implementamos las mejores prácticas de la industria, manteniendo estándares de calidad excepcionales en cada proyecto.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Educación Continua</h4>
+                        <p>Promovemos el aprendizaje constante, tanto en nuestro equipo como en nuestros clientes y estudiantes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enfoque Doble -->
+            <div class="dual-approach-section">
+                <div class="section-header">
+                    <h3 class="approach-title">Nuestro Enfoque Dual</h3>
+                    <p class="approach-subtitle">Soluciones para empresas y formación para profesionales</p>
+                </div>
+                <div class="approach-grid">
+                    <div class="approach-card enterprise">
+                        <div class="approach-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Para Empresas</h4>
+                        <p>Transformamos la infraestructura tecnológica de organizaciones, optimizando procesos, reduciendo costos y mejorando la eficiencia operacional.</p>
+                        <ul class="approach-benefits">
+                            <li><i class="fas fa-check"></i> Consultoría especializada</li>
+                            <li><i class="fas fa-check"></i> Implementación de soluciones</li>
+                            <li><i class="fas fa-check"></i> Soporte y mantenimiento</li>
+                        </ul>
+                    </div>
+                    <div class="approach-card education">
+                        <div class="approach-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Para Estudiantes y Profesionales</h4>
+                        <p>Formamos la próxima generación de especialistas TI con experiencia práctica real y conocimientos actualizados del mercado.</p>
+                        <ul class="approach-benefits">
+                            <li><i class="fas fa-check"></i> Talleres y capacitaciones</li>
+                            <li><i class="fas fa-check"></i> Mentorías personalizadas</li>
+                            <li><i class="fas fa-check"></i> Proyectos reales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Soluciones especializadas para cubrir todas sus necesidades tecnológicas</p>
+            </div>
+            
+            <!-- Servicios Grid -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>Cloud Computing</h4>
+                    <p>Diseño, migración y optimización de infraestructuras en AWS, Azure y Google Cloud Platform.</p>
+                    <div class="service-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">GCP</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>Auditorías de Infraestructura TI</h4>
+                    <p>Evaluación completa de sistemas, identificación de vulnerabilidades y recomendaciones de mejora.</p>
+                    <div class="service-tags">
+                        <span class="tag">Seguridad</span>
+                        <span class="tag">Performance</span>
+                        <span class="tag">Compliance</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4>Automatización de Procesos TI</h4>
+                    <p>Implementación de CI/CD, Infrastructure as Code con Terraform y gestión de configuraciones con Ansible.</p>
+                    <div class="service-tags">
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Ansible</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Troubleshooting Especializado</h4>
+                    <p>Resolución de problemas críticos en servidores y servicios, con soporte 24/7 para sistemas productivos.</p>
+                    <div class="service-tags">
+                        <span class="tag">24/7</span>
+                        <span class="tag">Crítico</span>
+                        <span class="tag">Soporte</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h4>Talleres y Capacitaciones</h4>
+                    <p>Formación técnica especializada para equipos de trabajo en tecnologías DevOps y Cloud.</p>
+                    <div class="service-tags">
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Cloud</span>
+                        <span class="tag">Training</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Mentorías Técnicas</h4>
+                    <p>Acompañamiento personalizado para profesionales y estudiantes en su crecimiento técnico.</p>
+                    <div class="service-tags">
+                        <span class="tag">Mentoría</span>
+                        <span class="tag">Personal</span>
+                        <span class="tag">Crecimiento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Blog Técnico</h2>
+                <p class="section-subtitle">Artículos, tutoriales y recursos educativos para profesionales TI</p>
+            </div>
+            <div class="blog-content">
+                
+                
+                <!-- Temas Populares -->
+                <div class="popular-topics">
+                    <div class="topics-header">
+                        <h3>Temas Populares</h3>
+                        <p>Los temas más buscados por empresas y profesionales</p>
+                    </div>
+                    <div class="topics-grid">
+                        <div class="topic-tag featured" data-category="cloud">
+                            <i class="fab fa-aws"></i>
+                            <span>Migración a Cloud</span>
+                            <small>32 artículos</small>
+                        </div>
+                        <div class="topic-tag featured" data-category="devops">
+                            <i class="fas fa-infinity"></i>
+                            <span>CI/CD Pipelines</span>
+                            <small>28 artículos</small>
+                        </div>
+                        <div class="topic-tag featured" data-category="automation">
+                            <i class="fas fa-robot"></i>
+                            <span>Infrastructure as Code</span>
+                            <small>25 artículos</small>
+                        </div>
+                        <div class="topic-tag" data-category="monitoring">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Monitoreo & Observabilidad</span>
+                            <small>19 artículos</small>
+                        </div>
+                        <div class="topic-tag" data-category="security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Seguridad en Cloud</span>
+                            <small>16 artículos</small>
+                        </div>
+                        <div class="topic-tag" data-category="education">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Guías para Estudiantes</span>
+                            <small>22 artículos</small>
+                        </div>
+                        <div class="topic-tag" data-category="troubleshooting">
+                            <i class="fas fa-tools"></i>
+                            <span>Troubleshooting</span>
+                            <small>14 artículos</small>
+                        </div>
+                        <div class="topic-tag" data-category="performance">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Optimización</span>
+                            <small>18 artículos</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artículos del Blog -->
+                <div class="blog-posts">
+                    <div class="blog-post" data-post="post-1">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <span class="post-date">15 Jun 2025</span>
+                                <span class="post-category">Cloud Computing</span>
+                            </div>
+                            <h3 class="post-title">Guía Completa: Migración a AWS sin Dolor de Cabeza</h3>
+                        </div>
+                        <div class="post-excerpt">
+                            <p>Metodología probada en +50 empresas chilenas para migrar a AWS. Incluye casos reales, ROI del 48% y scripts prácticos.</p>
+                        </div>
+                        <div class="post-stats">
+                            <span class="reading-time"><i class="fas fa-clock"></i> 15 min</span>
+                            <span class="post-tags">
+                                <span class="tag">AWS</span>
+                                <span class="tag">Migration</span>
+                                <span class="tag">ROI</span>
+                            </span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn-read-more" onclick="openBlogPost('post-1')">
+                                <i class="fas fa-arrow-right"></i>
+                                Leer Artículo
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="blog-post" data-post="post-2">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <span class="post-date">22 Jun 2025</span>
+                                <span class="post-category">DevOps Education</span>
+                            </div>
+                            <h3 class="post-title">CI/CD para Estudiantes: De Cero a Héroe en 30 Días</h3>
+                        </div>
+                        <div class="post-excerpt">
+                            <p>Proyecto práctico completo con pipeline real. Tu diferenciador en el mercado laboral con GitHub Actions, Docker y AWS.</p>
+                        </div>
+                        <div class="post-stats">
+                            <span class="reading-time"><i class="fas fa-clock"></i> 25 min</span>
+                            <span class="post-tags">
+                                <span class="tag">CI/CD</span>
+                                <span class="tag">Students</span>
+                                <span class="tag">DevOps</span>
+                            </span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn-read-more" onclick="openBlogPost('post-2')">
+                                <i class="fas fa-arrow-right"></i>
+                                Leer Artículo
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="blog-post" data-post="post-3">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <span class="post-date">28 Jun 2025</span>
+                                <span class="post-category">Infrastructure as Code</span>
+                            </div>
+                            <h3 class="post-title">Terraform desde Cero: Infrastructure as Code para Empresas Chilenas</h3>
+                        </div>
+                        <div class="post-excerpt">
+                            <p>Case study de fintech: reducción del 99% en tiempo de deploy. ROI del 340% en el primer año con Terraform.</p>
+                        </div>
+                        <div class="post-stats">
+                            <span class="reading-time"><i class="fas fa-clock"></i> 20 min</span>
+                            <span class="post-tags">
+                                <span class="tag">Terraform</span>
+                                <span class="tag">IaC</span>
+                                <span class="tag">Chile</span>
+                            </span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn-read-more" onclick="openBlogPost('post-3')">
+                                <i class="fas fa-arrow-right"></i>
+                                Leer Artículo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-cta">
+                    <p>¿Te interesa algún tema específico? <a href="#contacto">Sugiere temas</a> para próximos artículos o síguenos en <a href="https://instagram.com/codeplus.cl" target="_blank">@codeplus.cl</a> para más contenido técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle">¿Listo para transformar tu infraestructura tecnológica?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Sitio Web Oficial</h3>
+                            <p><a href="https://codeplus.cl" target="_blank">https://codeplus.cl</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Síguenos en Instagram</h3>
+                            <p><a href="https://instagram.com/codeplus.cl" target="_blank">@codeplus.cl</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Conecta en LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/company/codepluscl" target="_blank">LinkedIn Company</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa (opcional)</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Cuéntanos sobre tu proyecto o consulta..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo-blanco.svg" alt="Code+" class="footer-logo-img" loading="lazy">
+                    <p>Soluciones tecnológicas confiables e innovadoras para empresas y profesionales TI</p>
+                    <div class="footer-stats">
+                        <span>15+ años de experiencia</span>
+                        <span>100+ proyectos exitosos</span>
+                        <span>Soporte 24/7</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#blog">Blog Técnico</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li>Cloud Computing</li>
+                        <li>DevOps & SRE</li>
+                        <li>Automatización TI</li>
+                        <li>Auditorías de Infraestructura</li>
+                        <li>Talleres y Capacitaciones</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/codepluscl" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://instagram.com/codeplus.cl" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://wa.me/56990859444" target="_blank" rel="noopener" aria-label="WhatsApp Business">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://github.com/organizations/codeplus-cl" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.youtube.com/@codeplus-cl" target="_blank" rel="noopener" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Code+ - Consultora Tecnológica. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56990859444?text=Hola%20Code%2B%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" 
+       target="_blank" 
+       class="whatsapp-float" 
+       aria-label="Contactar por WhatsApp"
+       rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Blog Modal -->
+    <div class="blog-modal" id="blog-modal">
+        <div class="blog-modal-content">
+            <div class="blog-modal-loader" id="blog-modal-loader">
+                <div class="loader-spinner"></div>
+                <div class="loader-text">Cargando artículo...</div>
+            </div>
+            <div class="blog-modal-header">
+                <button class="blog-modal-close" onclick="closeBlogModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="blog-modal-body" id="blog-modal-body">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- Google Analytics (Placeholder for future integration) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
+</body>
+</html>
